@@ -1,0 +1,59 @@
+{
+  "name": "solana-dapp-next",
+  "version": "0.2.0",
+  "author": "Solana Maintainers <maintainers@solana.foundation>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "keygen": "ts-node src/tokenUtils/keygen.ts",
+    "airdrop": "ts-node src/tokenUtils/airdrop.ts",
+    "sk_decode": "ts-node src/tokenUtils/sk_decode.ts",
+    "spl_init": "ts-node src/tokenUtils/spl_init.ts",
+    "spl_mint": "ts-node src/tokenUtils/spl_mint.ts",
+    "spl_transfer": "ts-node src/tokenUtils/spl_transfer.ts",
+    "spl_metadata": "ts-node src/tokenUtils/spl_metadata.ts",
+    "token_image": "ts-node src/tokenUtils/token_image.ts",
+    "token_metadata": "ts-node src/tokenUtils/token_metadata.ts"
+  },
+  "dependencies": {
+    "@heroicons/react": "^1.0.5",
+    "@metaplex-foundation/mpl-token-metadata": "^3.2.1",
+    "@metaplex-foundation/umi": "^0.9.1",
+    "@metaplex-foundation/umi-bundle-defaults": "^0.9.1",
+    "@metaplex-foundation/umi-uploader-bundlr": "^0.9.1",
+    "@solana/spl-token": "^0.4.3",
+    "@solana/wallet-adapter-base": "^0.9.22",
+    "@solana/wallet-adapter-react": "^0.15.32",
+    "@solana/wallet-adapter-react-ui": "^0.9.31",
+    "@solana/wallet-adapter-wallets": "^0.19.16",
+    "@solana/web3.js": "^1.91.1",
+    "@tailwindcss/typography": "^0.5.9",
+    "@types/node": "^20.11.30",
+    "axios": "^1.6.8",
+    "bs58": "^5.0.0",
+    "daisyui": "^1.24.3",
+    "immer": "^9.0.12",
+    "next": "^13.1.5",
+    "next-compose-plugins": "^2.2.1",
+    "next-transpile-modules": "^10.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^5.4.3",
+    "zustand": "^3.6.9"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.27",
+    "autoprefixer": "^10.4.2",
+    "eslint": "8.7.0",
+    "eslint-config-next": "^13.1.5",
+    "postcss": "^8.4.5",
+    "tailwindcss": "^3.2.4",
+    "ts-node": "^10.9.2"
+  },
+  "engines": {
+    "node": ">=16"
+  }
+}
