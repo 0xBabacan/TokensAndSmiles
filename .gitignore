@@ -1,0 +1,52 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+src/tokenUtils/.yarn/*
+!src/tokenUtils/.yarn/patches
+!src/tokenUtils/.yarn/plugins
+!src/tokenUtils/.yarn/releases
+!src/tokenUtils/.yarn/sdks
+!src/tokenUtils/.yarn/versions
+
+#!.yarn/cache
+.pnp.*
+
+
+# local env files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+
+# logs
+*.log
+
+# Do not push your secret key to github
+sk_decode.ts
+wallet.json
