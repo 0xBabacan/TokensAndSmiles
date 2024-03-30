@@ -2,8 +2,11 @@ import { useConnection, useWallet } from "@solana/wallet-adapter-react";
 import { Keypair, SystemProgram, Transaction } from "@solana/web3.js";
 import React, { FC, useCallback, useState } from "react";
 import { notify } from "utils/notifications";
-import { getFlightMiles } from './FlightUtils';
+//import { getFlightMiles } from './FlightUtils';
+import { getFlightMiles } from './ReadFlightFromFile';
 import { transferTST } from 'tokenUtils/spl_transfer';
+import { checkClaimedFlights } from './CheckClaimedFlights';
+import { writeClaimedFlights } from './WriteClaimedFlights';
 
 export const QueryFlightNumber: FC = () => {
   const { connection } = useConnection();
@@ -21,12 +24,23 @@ export const QueryFlightNumber: FC = () => {
         });
       }
 
-      const flightMile = await getFlightMiles(flightNumber);
-
-      console.log('publicKey: ', publicKey.toBase58());
-      console.log('transferAmount: ', flightMile);
-      await transferTST(publicKey.toBase58(), flightMile);
-
+      if (!checkClaimedFlights(publicKey.toBase58(), flightNumber)) {
+        //const flightMile = await getFlightMiles(flightNumber);
+        const flightMile = await getFlightMiles(flightNumber);
+        if (flightMile > 0) {
+          console.log('publicKey: ', publicKey.toBase58());
+          console.log('transferAmount: ', flightMile);
+          writeClaimedFlights(publicKey.toBase58(), flightNumber);
+          await transferTST(publicKey.toBase58(), flightMile);
+          notify({
+            type: "success",
+            message: "Success",
+            description: "Transaction successful!",
+          });
+        }
+      } else {
+        notify({ type: "error", message: "error", description: "You already claimed your tokens for this flight!" });
+      }
 // THIS PART WILL BE REMOVED
 /*
       const lamports = await connection.getMinimumBalanceForRentExemption(0);

@@ -1,0 +1,122 @@
+[
+  {
+    "flightNumber": "TK7264",
+    "departureAirport": "IST",
+    "arrivalAirport": "ESB",
+    "miles": 475
+  },
+  {
+    "flightNumber": "AA123",
+    "departureAirport": "JFK",
+    "arrivalAirport": "LAX",
+    "miles": 1450
+  },
+  {
+    "flightNumber": "DL456",
+    "departureAirport": "ATL",
+    "arrivalAirport": "ORD",
+    "miles": 587
+  },
+  {
+    "flightNumber": "UA789",
+    "departureAirport": "SFO",
+    "arrivalAirport": "SEA",
+    "miles": 679
+  },
+  {
+    "flightNumber": "BA234",
+    "departureAirport": "LHR",
+    "arrivalAirport": "CDG",
+    "miles": 210
+  },
+    {
+    "flightNumber": "EK987",
+    "departureAirport": "DXB",
+    "arrivalAirport": "JFK",
+    "miles": 1836
+  },
+  {
+    "flightNumber": "LH321",
+    "departureAirport": "FRA",
+    "arrivalAirport": "MUC",
+    "miles": 185
+  },
+  {
+    "flightNumber": "SQ123",
+    "departureAirport": "SIN",
+    "arrivalAirport": "HKG",
+    "miles": 1588
+  },
+  {
+    "flightNumber": "QF789",
+    "departureAirport": "SYD",
+    "arrivalAirport": "MEL",
+    "miles": 443
+  },
+  {
+    "flightNumber": "AF456",
+    "departureAirport": "CDG",
+    "arrivalAirport": "LHR",
+    "miles": 216
+  },
+  {
+    "flightNumber": "TK765",
+    "departureAirport": "IST",
+    "arrivalAirport": "AMS",
+    "miles": 1391
+  },
+  {
+    "flightNumber": "UA234",
+    "departureAirport": "LAX",
+    "arrivalAirport": "ORD",
+    "miles": 1745
+  },
+  {
+    "flightNumber": "DL789",
+    "departureAirport": "ATL",
+    "arrivalAirport": "LHR",
+    "miles": 3886
+  },
+  {
+    "flightNumber": "AA987",
+    "departureAirport": "DFW",
+    "arrivalAirport": "LAX",
+    "miles": 1236
+  },
+  {
+    "flightNumber": "BA321",
+    "departureAirport": "LHR",
+    "arrivalAirport": "JFK",
+    "miles": 3450
+  },
+  {
+    "flightNumber": "QF456",
+    "departureAirport": "SYD",
+    "arrivalAirport": "LAX",
+    "miles": 6504
+  },
+  {
+    "flightNumber": "SQ789",
+    "departureAirport": "SIN",
+    "arrivalAirport": "LHR",
+    "miles": 6742
+  },
+  {
+    "flightNumber": "AF123",
+    "departureAirport": "CDG",
+    "arrivalAirport": "JFK",
+    "miles": 3625
+  },
+  {
+    "flightNumber": "EK456",
+    "departureAirport": "DXB",
+    "arrivalAirport": "LHR",
+    "miles": 3415
+  },
+  {
+    "flightNumber": "LH789",
+    "departureAirport": "FRA",
+    "arrivalAirport": "LAX",
+    "miles": 5687
+  }
+]
