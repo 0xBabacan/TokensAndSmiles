@@ -13,6 +13,16 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `src/pages/_app.tsx` and related files under `src/components`. The page auto-updates as you edit the file.
 
+## Blockchain Integration (Frontend <-> Backend):
+A project-specific token, Tokens & Smiles token (TST) is generated and is used to claim rewards from flights. The claimed amount of tokens is calculated according to the distance between departure and arrival airports in miles. Currently, live data is not used for the calculation and therefore, `src/components/flight_data.json` is created and used for this purpose but in the future, it will be replaced with the real data
+
+## Presentation Link:
+Presentation Link: [Flight Token](https://docs.google.com/presentation/d/10PAgIEjwAVN8XVssh-8bvvvmT05B6QwGt6izGwR3yTg/edit?usp=sharing)
+
+Loom Video Link: [Presentation Video](https://www.loom.com/share/f2574539efd1447aa865ec58f510531f?sid=581c576f-9d85-408b-bc81-be52081681fe)
+
+## Idea:
+To address these challenges, we propose Tokens & Smiles, a decentralized loyalty program that offers a unified and transparent rewards system for airline customers. By leveraging blockchain technology, Tokens & Smiles ensures fair and consistent rewards for all users, regardless of their airline or banking affiliations.
 
 ## Value Proposition:
 The core value proposition of Tokens & Smiles lies in its ability to provide a seamless and rewarding experience for airline customers. 
