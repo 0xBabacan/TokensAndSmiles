@@ -14,7 +14,7 @@ export const QueryFlightNumber: FC = () => {
 
   const [flightNumber, setFlightNumber] = React.useState("");
 
-  const onClick = useCallback(async () => {
+  const claimTST = useCallback(async () => {
     try {
       if (!publicKey) {
         return notify({
@@ -24,12 +24,13 @@ export const QueryFlightNumber: FC = () => {
         });
       }
 
+      //console.log('Starting with flight - ', flightNumber);
       if (!checkClaimedFlights(publicKey.toBase58(), flightNumber)) {
         //const flightMile = await getFlightMiles(flightNumber);
         const flightMile = await getFlightMiles(flightNumber);
+        //console.log('transferAmount: ', flightMile);
         if (flightMile > 0) {
-          console.log('publicKey: ', publicKey.toBase58());
-          console.log('transferAmount: ', flightMile);
+          //console.log('publicKey: ', publicKey.toBase58());
           writeClaimedFlights(publicKey.toBase58(), flightNumber);
           await transferTST(publicKey.toBase58(), flightMile);
           notify({
@@ -37,42 +38,12 @@ export const QueryFlightNumber: FC = () => {
             message: "Success",
             description: "Transaction successful!",
           });
+        } else {
+          notify({ type: "error", message: "error", description: "Invalid flight mile!" });
         }
       } else {
         notify({ type: "error", message: "error", description: "You already claimed your tokens for this flight!" });
       }
-// THIS PART WILL BE REMOVED
-/*
-      const lamports = await connection.getMinimumBalanceForRentExemption(0);
-
-      const transaction = new Transaction().add(
-        SystemProgram.transfer({
-          fromPubkey: publicKey,
-          toPubkey: Keypair.generate().publicKey,
-          lamports,
-        })
-      );
-
-      const {
-        context: { slot: minContextSlot },
-        value: { blockhash, lastValidBlockHeight },
-      } = await connection.getLatestBlockhashAndContext();
-
-      const signature = await sendTransaction(transaction, connection, {
-        minContextSlot,
-      });
-
-      await connection.confirmTransaction({
-        blockhash,
-        lastValidBlockHeight,
-        signature,
-      });
-      notify({
-        type: "success",
-        message: "Success",
-        description: "Transaction successful!",
-      });
-*/
     } catch (e) {
       notify({ type: "error", message: "error", description: e.message });
     }
@@ -92,7 +63,7 @@ export const QueryFlightNumber: FC = () => {
       </div>
       <button 
         className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-24 mt-4"
-        onClick={() => onClick()}
+        onClick={() => claimTST()}
       >
         Earn your Tokens & Smiles!
       </button>

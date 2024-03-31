@@ -35,10 +35,9 @@ const App: FC<AppProps> = () => {
       <ConnectionProvider endpoint={endpoint}>
         <WalletProvider wallets={wallets} autoConnect>
           <WalletModalProvider>
-            <WalletMultiButton className="mb-3" />
-            <WalletDisconnectButton className="mb-5" />
+            <WalletMultiButton className="mb-3" style={{ marginBottom: "20px" }} />
+            <WalletDisconnectButton className="mb-5" style={{ marginBottom: "20px" }} />
             <QueryFlightNumber />
-            <RequestAirdrop />
           </WalletModalProvider>
         </WalletProvider>
       </ConnectionProvider>
